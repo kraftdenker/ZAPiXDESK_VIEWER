@@ -1,0 +1,35 @@
+# ZAPiXDeskViewer — dependencies
+#
+# Usage (Linux/macOS):
+#   python3 -m venv venv
+#   source venv/bin/activate
+#   pip install -r requirements.txt
+#   python ZAPiXDeskViewer.py
+#
+# Usage (Windows):
+#   python -m venv venv
+#   venv\Scripts\activate
+#   pip install -r requirements.txt
+#   python ZAPiXDeskViewer.py
+#
+# (Optional) To build a Windows .exe executable:
+#   pip install pyinstaller
+#   pyinstaller --onefile --windowed --icon zapixdesk.ico ZAPiXDeskViewer.py
+
+# Pillow is required for:
+#  - the splash screen with the logo (splash.png)
+#  - the window icon (logo_icone.png on Linux / zapixdesk.ico on Windows)
+#  - photo/audio/video previews in conversations
+#
+# Debian's Pillow 10.x does NOT include PIL.ImageTk; 11+/12 does (with
+# tkinter available).
+pillow>=11.0
+
+# PySide6 is required for the Qt viewer (ZAPiXDeskViewerQt.py), which has
+# cleaner resizing and more robust threads than the tkinter viewer.
+# The original viewer (ZAPiXDeskViewer.py) keeps working with Pillow only.
+PySide6>=6.5
+
+# Optional: package the app into a single executable (.exe on Windows /
+# binary on Linux). Uncomment to use:
+# pyinstaller>=6.0
