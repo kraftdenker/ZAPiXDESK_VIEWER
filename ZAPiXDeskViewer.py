@@ -3,6 +3,10 @@
 """
 ZAPiXDeskViewer — viewer for ZAPiXDESK exports (PowerShell).
 
+
+Author:    Alberto Magno (kraftdenker) <alberto.magno@gmail.com>
+Co-author: DeepSeek Harness (AI assistant)
+
 Single file, standard library only + Pillow (optional, for image
 previews). Flow:
 
